@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Calculadora calculadora = new Calculadora();
+
+        Suma suma = new Suma();
+        Resta resta = new Resta();
+        Multiplicacion multiplicacion = new Multiplicacion();
+        Division division = new Division();
 
         int menu;
 
@@ -19,25 +21,20 @@ public class Main {
             System.out.println("0.- Salir");
             System.out.print("¿Qué opción quieres realizar?: ");
 
-            menu= sc.nextInt();
-
+            menu = sc.nextInt();
 
             switch (menu) {
                 case 1:
-                    double TotalSuma = calculadora.sumar();
-                    System.out.println("La suma es: " + TotalSuma);
+                    System.out.println("La suma es: " + suma.Sumar());
                     break;
                 case 2:
-                    double TotalResta = calculadora.restar();
-                    System.out.println("La resta es: " + TotalResta);
+                    System.out.println("La resta es: " + resta.Restar());
                     break;
                 case 3:
-                    double TotalMultiplicacion = calculadora.multiplicar();
-                    System.out.println("La multiplicación es: " + TotalMultiplicacion);
+                    System.out.println("La multiplicación es: " + multiplicacion.Multiplicar());
                     break;
                 case 4:
-                    double TotalDivision = calculadora.dividir();
-                    System.out.println("La división es: " + TotalDivision);
+                    System.out.println("La división es: " + division.Dividir());
                     break;
                 case 0:
                     System.out.println("Salir");
